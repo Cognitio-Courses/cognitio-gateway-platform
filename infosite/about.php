@@ -24,9 +24,9 @@ function showAbout() {
             <h2> <b>About Cognitio</b> </h2>
 
             <p class= "w3-col l12 w3-left" style= "text-align:justify"> 
-            Cognitio is your all-in-one gateway platform to Earth Observations (EO) learning. We bridge the gap between training and learning to enable policymakers and decision makers around the world have access to the most relevant trainings and courses and empower them with the knowledge and skills in addressing the world's most pressing social problems.</p>
+            Our mission is to empower all learners - policymakers, researchers, analysts, developers, NGO workers, and students -  with knowledge and skills to leverage Earth Observations (EO) for social impact.</p>
             <p class= "w3-col l12 w3-left" style= "text-align:justify"> 
-            Cognitio aggregates its growing collection of EO courses and trainings from leading EO space agencies and organizations aiming to provide information for learners based on their skill level, thematic areas of interest, and/or technology stack.</p>
+            We bridge the gap between training and learning by providing a central gateway platform to all available EO courses and trainings aggregated from leading space agencies and organizations worldwide.</p>
             <p class= "w3-col l12 w3-left" style= "text-align:justify"> 
             We also host our own learning management system. Learners have the option to take courses created by our course content providers directly on our platform.</p>
 
