@@ -1,0 +1,142 @@
+{% extends 'contained_base.html' %} {% block content %}
+<div class="row">
+	<div class="col-12">
+		<form class="flex-grow-1 d-flex justify-content-center">
+    <div class="py-3 d-flex align-items-center">
+      <input
+        type="text"
+        name="search"
+        value="{{request.GET.search}}"
+        class="form-control me-2"
+        placeholder="Search" />
+      <button
+        class="btn btn-outline-primary"
+        type="submit">
+        Search
+      </button>
+    </div>
+  </form>
+	</div>
+  <div class="col-md-3">
+    <form>
+      <div class="card mb-3">
+        <div class="card-header"><strong>Skill level</strong></div>
+        <div class="card-body">
+          <ul class="list-unstyled">
+            {% for skill_level in skill_levels %}
+            <li>
+              <input
+                type="checkbox"
+                id="skill-{{skill_level.name}}"
+                class="form-checkbox"
+                value="{{skill_level.id}}"
+                name="skill_levels"
+                {% if skill_level.id in checked_skill_levels %}
+                checked
+                {% endif %} />
+              <label
+                for="skill-{{skill_level.name}}"
+                class="text-muted"
+                >{{skill_level.name}}</label
+              >
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-header"><strong>Discipline</strong></div>
+        <div class="card-body">
+          <ul class="list-unstyled">
+            {% for discipline in disciplines %}
+            <li>
+              <input
+                type="checkbox"
+                id="{{discipline.slug}}"
+                class="form-checkbox"
+                value="{{discipline.slug}}"
+                name="disciplines"
+                {% if discipline.slug in checked_disciplines %}
+                checked
+                {% endif %} />
+              <label
+                for="{{discipline.slug}}"
+                class="text-muted"
+                >{{discipline.name}}</label
+              >
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-header"><strong>Tools</strong></div>
+        <div class="card-body">
+          <ul class="list-unstyled">
+            {% for tool in tools %}
+            <li>
+              <input
+                type="checkbox"
+                id="{{tool.slug}}"
+                class="form-checkbox"
+                name="tools"
+                value="{{tool.slug}}"
+                {% if tool.slug in checked_tools %}
+                checked
+                {% endif %} />
+              <label
+                for="{{tool.slug}}"
+                class="text-muted"
+                >{{tool.name}}</label
+              >
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-primary w-100">
+          <i class="bi-funnel pe-2"></i>
+          Filter
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-9">
+    <div class="row flex-column g-3">
+      {% for content in page_obj.object_list %} 
+      {% include 'components/content/content-card.html' with content=content %}
+      {% endfor %}
+    </div>
+    <nav class="mt-5">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+            {% if page_obj.has_previous %}
+          <a
+            class="page-link"
+            href="?page={{ page_obj.previous_page_number }}"
+            >Previous</a
+          >
+        </li>
+        {% endif %}
+        <li class="page-item">
+          <a
+            class="page-link"
+            href="#"
+            > Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</a
+          >
+        </li>
+           {% if page_obj.has_next %}
+        <li class="page-item">
+          <a
+            class="page-link"
+            href="?page={{ page_obj.next_page_number }}"
+            >Next</a
+          >
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+</div>
+{% endblock content %}

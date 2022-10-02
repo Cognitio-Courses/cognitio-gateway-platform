@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<style>
+    main{
+        padding:50px 0px;
+    }
+</style>
+{% endblock extra_css %}
+
+{% block body %}
+{% include 'components/navbar.html' %}
+<main>
+<div class="container">
+	
+          <h4 class="mb-3">Register as Content Creator</h4>
+          <form class="needs-validation" method="POST">
+			{% csrf_token %}
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstName" name="first_name" placeholder="" value="" required>
+                {% if form.errors.first_name %}
+					<div class="text-danger fs-6">
+						{{form.errors.first_name.as_text}}
+					</div>
+				{% endif %}
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="lastName" name="last_name" placeholder="" value="" required>
+                {% if form.errors.last_name %}
+					<div class="text-danger fs-6">
+						{{form.errors.last_name.as_text}}
+					</div>
+				{% endif %}
+              </div>
+              
+              <div class="col-12">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username">
+                {% if form.errors.username %}
+				<div class="text-danger fs-6">
+                  {{form.errors.username.as_text}}
+                </div>
+				{% endif %}
+              </div>
+  
+              <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com">
+                {% if form.errors.email %}
+					<div class="text-danger fs-6">
+						{{form.errors.email.as_text}}
+					</div>
+				{% endif %}
+              </div>
+
+			  <div class="col-sm-6">
+                <label for="password1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password1" name="password1" placeholder="" value="" required>
+                {% if form.errors.password1 %}
+					<div class="text-danger fs-6">
+						{{form.errors.password1.as_text}}
+					</div>
+				{% endif %}
+              </div>
+			  
+			  <div class="col-sm-6">
+                <label for="password2" class="form-label">Password Confirmation</label>
+                <input type="password" class="form-control" id="password2" name="password2" placeholder="" value="" required>
+              </div>
+
+			
+			<div class="col-md-12">
+				<label for="location" class="form-label">Location</label>
+				<select name="location" id="location" class="form-select">
+					<option value="" disabled>Choose...</option>
+					{% for country in countries %}
+						<option value="{{country}}">{{country}}</option>
+					{% endfor %}
+				</select>
+				{% if form.errors.location %}
+					<div class="text-danger fs-6">
+						{{form.errors.location.as_text}}
+					</div>
+				{% endif %}
+			</div>
+              
+  
+			
+				<div class="col-md-8">
+					<label for="Occupation" class="form-label">Occupation</label>
+					<input type="text" class="form-control" name="occupation" id="Occupation">
+					{% if form.errors.occupation %}
+					<div class="text-danger fs-6">
+						{{form.errors.occupation.as_text}}
+					</div>
+				{% endif %}
+				  </div>
+				
+				  <div class="col-md-4">
+					<label for="sector" class="form-label">Sector</label>
+					<select class="form-select" id="skill_level" name="sector" required>
+					  <option value="" disabled>Choose...</option>
+					  {% for key, value in sectors %}
+						<option value="{{key}}">{{value}}</option>
+					  {% endfor %}
+					</select>
+					{% if form.errors.sector %}
+					<div class="text-danger fs-6">
+						{{form.errors.sector.as_text}}
+					</div>
+				{% endif %}
+				  </div>
+
+				  <div class="col-md-6">
+					<label for="Role" class="form-label">Role</label>
+					<input type="text" id="Role" name="role" class="form-control">
+					{% if form.errors.role %}
+					<div class="text-danger fs-6">
+						{{form.errors.role.as_text}}
+					</div>
+				{% endif %}
+				  </div>
+	
+				  <div class="col-md-6">
+					<label for="skill_level" class="form-label">Skill Level</label>
+					<select class="form-select" id="skill_level" name="skill_level" required>
+					  <option value="" disabled>Choose...</option>
+					  {% for skill_level in skill_levels %}
+						<option value="{{skill_level.id}}">{{skill_level.name}}</option>
+					  {% endfor %}
+					</select>
+					{% if form.errors.skill_level %}
+					<div class="text-danger fs-6">
+						{{form.errors.skill_level.as_text}}
+					</div>
+				{% endif %}
+				  </div>
+			
+  
+            <hr class="my-4">
+            <h4 class="mb-3">Specialization</h4>
+            <div class="row">
+				{% if form.errors.specialization %}
+					<div class="text-danger fs-6">
+						{{form.errors.specialization.as_text}}
+					</div>
+				{% endif %}
+              {% for thematic_area in thematic_areas %}
+              <div class="col-md-3">
+                <input type="checkbox" class="form-check-input" name="specialization" id="tag-{{thematic_area.slug}}" value={{thematic_area.id}}>
+                <label class="form-check-label" for="tag-{{thematic_area.slug}}">{{thematic_area.name}}</label>    
+              </div>
+              {% endfor %}
+			  
+            </div>
+  
+            <hr class="my-4">
+  
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Register</button>
+          </form>
+	</div>
+    </main>
+  
+
+  
+{% endblock body %}

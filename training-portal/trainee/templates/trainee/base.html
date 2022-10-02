@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'trainee/css/sidebar.css' %}" />
+{% endblock extra_css %} {% block body %}
+<main class="position-relative">
+  <div class="position-fixed top-0 left-0">
+    <div
+      class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"
+      style="width: 280px;height:100vh;"
+      id="sidebar"
+    >
+      <ul class="nav nav-pills flex-column mb-auto text-center mt-sm-5 mt-0">
+        <li class="nav-item">
+          <h5>My Progress</h5>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" aria-current="page">
+            Learn an EO course
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" aria-current="page">
+            Join Competition
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'trainee:leaderboards' %}" class="nav-link text-white" aria-current="page">
+            View Leaderboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" aria-current="page">
+            Community
+          </a>
+        </li>
+      </ul>
+      <div class="mx-auto">
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 text-white text-decoration-none"
+        >
+          <img
+            src="{% static 'trainings/images/cognitio.png' %}"
+            alt=""
+            style="height: 50px; width: auto"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="flex-grow-1">
+    {% include 'trainee/components/navbar.html' %}
+    <div class="container mt-5 pb-5">
+      {% block content %} {% endblock content %}
+    </div>
+  </div>
+</main>
+
+{% endblock body %}

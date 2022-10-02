@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+<link rel="stylesheet" href="{% static 'accounts/css/signin.css' %}" />
+{% endblock extra_css %}
+
+{% block body %}
+
+<main class="form-signin">
+
+
+  {% if messages %}
+	<div class="alert alert-success">
+    {% for message in messages %}
+      {{message}}
+    {% endfor %}
+	</div>
+  {% endif %}
+
+  {% if form.errors %}
+  <div class="alert alert-danger">
+    <p>Username or password is invalid</p>
+  </div>
+  {% endif %}
+  <form method="POST">
+    {% csrf_token %}
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <div class="form-floating">
+      <input
+        name="username"
+        type="text"
+        class="form-control"
+        id="floatingInput"
+        placeholder="name@example.com"
+      />
+      <label for="floatingInput">Username</label>
+    </div>
+    <div class="form-floating">
+      <input
+        name="password"
+        type="password"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Password"
+      />
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label> <input type="checkbox" value="remember-me" /> Remember me </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <div class="text-center text-muted">or</div>
+    <div class="text-center">
+        <a href="{% url 'account:register' %}">Register as learner</a>
+		<div class="text-center text-muted">or</div>
+		<a href="{% url 'account:register.content_creator' %}">Register as content creator</a>
+    </div>
+  </form>
+</main>
+{% endblock body %}

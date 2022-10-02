@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block body %} 
+{% include 'components/navbar.html'%}
+<div
+  class="vh-100"
+  style="
+    background-image: url('{% static 'trainings/images/banner.png' %}');
+    background-size: cover;
+	background-origin: border-box;
+  "
+>
+  <div class="h-100 d-flex justify-content-center align-items-center">
+    <div class="container text-center text-light">
+      <h1>Build EO knowledge and skills</h1>
+      <p>
+        Explore, review and enroll in EO courses all in one gateway platform.
+      </p>
+      <a href="{% url 'account:register' %}" class="btn btn-lg btn-primary"
+        >Create Free Account</a
+      >
+    </div>
+  </div>
+</div>
+
+{% include 'components/sections/eo_course_providers.html' %}
+{% include 'components/sections/what_is_cognitio.html' %}
+{% include 'components/sections/learning_paths.html' %}
+{% include 'components/sections/course_provider.html' %}
+{% include 'components/sections/partner_with_us.html' %}
+{% include 'components/sections/browse_our_catalog.html' %}
+{% include 'components/footer.html' %}
+{% endblock body %}

@@ -1,0 +1,30 @@
+{% load static %}
+<header class="px-3 py-4 bg-dark text-white">
+    <div class="container">
+      <div
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center text-white text-decoration-none"
+        >
+			<img src="{% static 'trainings/images/cognitio.png' %}" alt="" srcset="" style="height:auto;width:100px;">
+        </a>
+  
+        <ul
+          class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+        >
+          <li><a href="{% url 'training:course.list' %}" class="nav-link px-2 text-white">Course Catalog</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Competitions</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Blog</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Community</a></li>
+        </ul>
+  
+  
+        <div class="text-end">
+          <a href="{% url 'account:login' %}" type="button" class="btn btn-outline-light me-2">Login</a href="{% url 'account:login' %}">
+          <a href="{% url 'account:register' %}" type="button" class="btn btn-primary">Sign-up</a href="{% url 'account:register' %}">
+        </div>
+      </div>
+    </div>
+  </header>
