@@ -133,7 +133,7 @@ function showHome() {
             <h1 class="Roboto"><b> We help you begin your EO learning journey</b></h1><br><br>
 			
             <div class="w3-center">
-                    <a href="#">
+                    <a href="http://courses-gateway-cognitio.xyz/courses">
                         <div class="w3-button w3-highway-blue w3-hover-light-blue w3-round-large w3-large">Browse our Catalog</div>
                     </a>
                 </div>

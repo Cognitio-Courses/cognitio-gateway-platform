@@ -50,7 +50,7 @@ function showTeam() {
             
             <h1 class="w3-col l5 w3-left" style="color:#9fc5e8"><b>Mark Neil Pascual</b></h1>
             <h4 class="w3-col l6 w3-left"><b>Lead Developer</b></h4>
-            <p class="w3-col l5" style= "text-align:justify"></p>     
+            <p class="w3-col l5" style= "text-align:justify">Dedicated and motivated data engineer & full stack developer with more than 5 years’ experience in data engineering adept at building & maintaining analytics infrastructure and developing & testing architecture for data generation, Skilled in building API integrations. Experience front-end and back-end development process using python, Django, NodeJS and ReactJS. Experience in defining a systematic solution which fits best across the technical, operational, and management standards & establishing a continuous build environment to accelerate software deployment and development processes. Experience in designing, developing, and maintaining fully-fledged and functioning platforms with databases or servers, build systems that collect, manage and convert raw data into usable information for sustainability business practices.</p>     
         </div> 
 
         <div style="height: 59px;"></div>

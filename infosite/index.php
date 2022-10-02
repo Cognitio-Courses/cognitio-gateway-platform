@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="resources/app_css.css" />
     <link rel="stylesheet" href="resources/w3.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+    
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-metro.css">
@@ -37,17 +38,17 @@
                 <i class="w3-xxlarge fa fa-bars"></i>
             </div>
             <div id = "main" class="w3-padding w3-hide-small w3-hide-medium">
-                <a href="#" class="w3-bar-item w3-button w3-hover-text-white w3-hover-none w3-center" style="height: 100px; padding-top: 45px;   margin-left: 60px;">Course Catalog</a>
+                <a href="http://courses-gateway-cognitio.xyz/courses" class="w3-bar-item w3-button w3-hover-text-white w3-hover-none w3-center" style="height: 100px; padding-top: 45px;   margin-left: 60px;">Course Catalog</a>
                 <a href="./?page=competitions" class="w3-bar-item w3-button w3-hover-text-white w3-hover-none w3-center" style="height: 100px; padding-top: 45px;">Competitions</a>
                 <a href="./?page=blog" class="w3-bar-item w3-button w3-hover-text-white w3-hover-none w3-center" style="height: 100px; padding-top: 45px;">Blog</a>
                 <a href="./?page=community" class="w3-bar-item w3-button w3-hover-text-white w3-hover-none w3-center" style="height: 100px; padding-top: 45px;  ">Community</a>
                  <a href="http://courses-gateway-cognitio.xyz/auth/login" class="w3-bar-item w3-button w3-black w3-border w3-round-large w3-hover-light-blue w3-center" style="max-width: 150px; margin:35px 15px 25px 150px; padding-bottom: 8px">Sign In</a>
-                 <a href="http://courses-gateway-cognitio.xyz/auth/login" class="w3-bar-item w3-button w3-highway-blue w3-round-large w3-hover-light-blue w3-center" style="max-width: 150px; margin:35px 20px 25px 0px; padding-bottom: 8px">Get Started</a>
+                 <a href="http://courses-gateway-cognitio.xyz/auth/register" class="w3-bar-item w3-button w3-highway-blue w3-round-large w3-hover-light-blue w3-center" style="max-width: 150px; margin:35px 20px 25px 0px; padding-bottom: 8px">Get Started</a>
                
                
 </div>
 		<nav id="navBar" class="w3-bar-block w3-xlarge w3-center w3-hide">
-			<a href="#" class="w3-bar-item w3-button w3-hover-text-white w3-hover-none">Course Catalog</a>
+			<a href="http://courses-gateway-cognitio.xyz/courses" class="w3-bar-item w3-button w3-hover-text-white w3-hover-none">Course Catalog</a>
 			<a href="./?page=competitions" class="w3-bar-item w3-button w3-hover-text-white w3-hover-none">Competitions</a>
 			<a href="./?page=blog" class="w3-bar-item w3-button w3-hover-text-white w3-hover-none">Blog</a>
 			<a href="./?page=community" class="w3-bar-item w3-button w3-hover-text-white w3-hover-none">Community</a>
@@ -121,8 +122,8 @@
                 <a href="./?page=team" class="w3-bar-item w3-button w3-hover-none w3-center" style="height: 100px; padding-top: 45px; margin-right: 80px;">Team</a>
                 <div class="w3-bar-item w3-button w3-hover-none w3-center" style="height: 100px; padding-top: 45px;">Connect with Us</div>    
                 <div class ="w3-bar-item w3-button w3-hover-none w3-center" style="height: 100px; padding-top: 45px; margin-right: 3px;">
-                <a href="https://www.facebook.com/cirrolytix"> <i style='font-size:24px' class='fab'>&#xf082; &nbsp</i></a>   
-                <a href="https://www.twitter.com/cirrolytix"><i style='font-size:24px' class='fab'>&#xf081; &nbsp</i></a>
+                <a href="https://www.facebook.com/cirrolytix"> <img src="images/fb_icon.jpg" height=25px   alt="" />&nbsp;</a>  
+                <a href="https://www.twitter.com/cirrolytix"><img src="images/twitter_icon.jpg" height=25px   alt="" />&nbsp;</a>
                 <a href="mailto:support@cirrolytix.com"><i class="fa fa-envelope" style="font-size:24px"></i></a>
                 </div>
             </div>
@@ -139,9 +140,8 @@
 			<a href="" class="w3-bar-item w3-button w3-hover-text-white w3-hover-none">Connect with Us</a>
 
 			<div class="w3-bar-item w3-button w3-hover-text-white w3-hover-none">
-            <a href ="https://www.facebook.com/cirrolytix"> <i style='font-size:24px' class='fab'>&#xf082; &nbsp</i></a>
-            <a href ="https://www.twitter.com/cirrolytix"> <i style='font-size:24px' class='fab'>
-            &#xf081; &nbsp</i></a>
+            <a href ="https://www.facebook.com/cirrolytix">  <img src="images/fb_icon.jpg" height=25px   alt="" />&nbsp;</a>
+            <a href ="https://www.twitter.com/cirrolytix"><img src="images/twitter_icon.jpg" height=25px   alt="" />&nbsp;</a>
             <a href ="mailto:support@cirrolytix.com"> <i class="fa fa-envelope" style="font-size:24px"></i></a>
             
             <div>
